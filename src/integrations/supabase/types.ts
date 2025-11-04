@@ -14,7 +14,84 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      inbody_measurements: {
+        Row: {
+          basal_metabolic_rate: number | null
+          body_fat_percentage: number | null
+          body_water: number | null
+          created_at: string
+          id: string
+          measurement_date: string
+          mineral: number | null
+          muscle_mass: number | null
+          protein: number | null
+          user_id: string
+          visceral_fat_level: number | null
+          weight: number | null
+        }
+        Insert: {
+          basal_metabolic_rate?: number | null
+          body_fat_percentage?: number | null
+          body_water?: number | null
+          created_at?: string
+          id?: string
+          measurement_date?: string
+          mineral?: number | null
+          muscle_mass?: number | null
+          protein?: number | null
+          user_id: string
+          visceral_fat_level?: number | null
+          weight?: number | null
+        }
+        Update: {
+          basal_metabolic_rate?: number | null
+          body_fat_percentage?: number | null
+          body_water?: number | null
+          created_at?: string
+          id?: string
+          measurement_date?: string
+          mineral?: number | null
+          muscle_mass?: number | null
+          protein?: number | null
+          user_id?: string
+          visceral_fat_level?: number | null
+          weight?: number | null
+        }
+        Relationships: []
+      }
+      user_settings: {
+        Row: {
+          created_at: string
+          id: string
+          inbody_api_key: string | null
+          inbody_device_id: string | null
+          last_sync: string | null
+          sync_enabled: boolean | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          inbody_api_key?: string | null
+          inbody_device_id?: string | null
+          last_sync?: string | null
+          sync_enabled?: boolean | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          inbody_api_key?: string | null
+          inbody_device_id?: string | null
+          last_sync?: string | null
+          sync_enabled?: boolean | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

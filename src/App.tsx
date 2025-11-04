@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import Workout from "./pages/Workout";
 import Diet from "./pages/Diet";
 import Profile from "./pages/Profile";
+import InBodySettings from "./pages/InBodySettings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/workout" element={<Workout />} />
           <Route path="/diet" element={<Diet />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/inbody" element={<InBodySettings />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

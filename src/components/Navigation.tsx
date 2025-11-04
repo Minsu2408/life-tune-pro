@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, LayoutDashboard, Dumbbell, Salad, User } from "lucide-react";
+import { Home, LayoutDashboard, Dumbbell, Salad, User, Activity } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Navigation = () => {
@@ -10,6 +10,7 @@ const Navigation = () => {
     { path: "/dashboard", label: "대시보드", icon: LayoutDashboard },
     { path: "/workout", label: "운동", icon: Dumbbell },
     { path: "/diet", label: "식단", icon: Salad },
+    { path: "/inbody", label: "InBody", icon: Activity },
     { path: "/profile", label: "프로필", icon: User },
   ];
 
